@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float runSpeed = 40f;
     public float horizontalMove = 0f;
     bool jump = false;
+
     // Update is called once per frame
     void Update()
     {
