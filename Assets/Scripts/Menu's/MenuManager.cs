@@ -10,7 +10,7 @@ public class MenuManager : MonoBehaviour
 
     public Menus CurrentMenuActive = Menus.MainMenu;
 
-    public enum Menus {
+    public  enum Menus {
         MainMenu,
         OptionsMenu,
         StartMenu
@@ -21,6 +21,7 @@ public class MenuManager : MonoBehaviour
            if (OptionsMenu.activeSelf) { OptionsMenu.SetActive(false); }
            if (StartMenu.activeSelf)   { StartMenu.SetActive(false); }
            if (!MainMenu.activeSelf)   { MainMenu.SetActive(true); }
+
     }
     
     public void ChangeMenu(Menus _newMenu) {
@@ -43,15 +44,6 @@ public class MenuManager : MonoBehaviour
 
         CurrentMenuActive = _newMenu;
     }
-
-
-
-    // Change this later. The buttons won't allow you to pass values into the function they are calling through the Onclick events, should do it via script instead ... 
-
-    public void StartMenuFunc() { ChangeMenu(Menus.StartMenu); }
-    public void OptionsMenuFunc() { ChangeMenu(Menus.OptionsMenu); }
-    public void MainMenuFunc() { ChangeMenu(Menus.MainMenu); }
-    public void ExitButton() { Application.Quit(); }
 
   
 }
