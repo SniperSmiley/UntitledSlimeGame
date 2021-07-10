@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class MainMenuScript : MonoBehaviour
 {
-    // Might delete
+   // DELETE AT SOME POINT TRASH
 
     public GameObject TitleGo;
 
     private bool firstClick = true;
+
 
 
     public void OnTitleClicked() {

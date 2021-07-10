@@ -23,7 +23,7 @@ public class DragMeScript : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0)) {
 
-            audioManager.PlaySoundEffect();
+            audioManager.PlaySquelchSoundEffect();
 
             rig.velocity = Vector3.zero;
 
@@ -35,7 +35,7 @@ public class DragMeScript : MonoBehaviour {
 
     private void OnMouseUp() {
 
-        audioManager.PlaySoundEffect();
+        audioManager.PlaySquelchSoundEffect();
 
         mousePos = Input.mousePosition;
         mousePos = Camera.main.ScreenToWorldPoint(mousePos);

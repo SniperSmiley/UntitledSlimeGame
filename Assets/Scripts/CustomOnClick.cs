@@ -9,6 +9,7 @@ public class CustomOnClick : MonoBehaviour
 
     public Button CustomButton;
     public int Mode = 0;
+    private int numClicks = 0;
 
     [Header("0 : If switching scene")]
     [Tooltip("0: MainMenu 1: Options 2: Start ")]
@@ -27,13 +28,17 @@ public class CustomOnClick : MonoBehaviour
     }
 
     void CustomButtonOnClick() {
-        audioManager.PlaySoundEffect();
+        audioManager.PlaySquelchSoundEffect();
 
         switch (Mode) {
 
             case 0: MenuManager.ChangeMenu((MenuManager.Menus) MenuToSwitchTo); break; // change menu
             case 1: Application.Quit(); break; // exit game
             case 2: break; // nothing
+            case 3: numClicks++; 
+                if (numClicks >= 5) { audioManager.PlayMMMMSoundEffect(); numClicks = 0; }
+                
+                break;
 
             default:
                 break;
