@@ -7,6 +7,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class DragMeScript : MonoBehaviour {
 
+    private AudioManager audioManager;
+
     public float DragForce = 1f;
 
     private Vector3 startPos;
@@ -15,11 +17,13 @@ public class DragMeScript : MonoBehaviour {
     private Rigidbody2D rig;
 
 
-    private void Awake() { rig = transform.GetComponent<Rigidbody2D>(); }
+    private void Awake() { rig = transform.GetComponent<Rigidbody2D>(); audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>(); }
 
     private void OnMouseDown() {
 
         if (Input.GetMouseButtonDown(0)) {
+
+            audioManager.PlaySquelchSoundEffect();
 
             rig.velocity = Vector3.zero;
 
@@ -30,6 +34,8 @@ public class DragMeScript : MonoBehaviour {
     }
 
     private void OnMouseUp() {
+
+        audioManager.PlaySquelchSoundEffect();
 
         mousePos = Input.mousePosition;
         mousePos = Camera.main.ScreenToWorldPoint(mousePos);
