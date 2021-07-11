@@ -16,9 +16,7 @@ public class AudioManager : MonoBehaviour {
     public int NumberOfAudioSources = 25;
 
     public static List<AudioSource> AudioSourcesList = new List<AudioSource>();
-
     public List<AudioClip> InteractionAudioClips;
-
 
     private void Awake() {
         AudioSource source;
@@ -36,10 +34,8 @@ public class AudioManager : MonoBehaviour {
         StartCoroutine(PlayEffect(InteractionAudioClips[clip]));
     }
 
-    public void PlayMMMMSoundEffect() {
-        StartCoroutine(PlayEffect(GrossDontTouch));
-    }
-
+    public void PlayMMMMSoundEffect() {  StartCoroutine(PlayEffect(GrossDontTouch)); }
+      
     public static IEnumerator PlayEffect(AudioClip clip) {
 
         AudioSource _audioSource = null;
@@ -63,8 +59,5 @@ public class AudioManager : MonoBehaviour {
             _audioSource.clip = null;
 
         }
-
     }
-
-
 }

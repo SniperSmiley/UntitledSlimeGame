@@ -41,9 +41,7 @@ QualitySettings:
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
     customRenderPipeline: {fileID: 0}
-    excludedTargetPlatforms:
-    - Standalone
-    - Windows Store Apps
+    excludedTargetPlatforms: []
   - serializedVersion: 2
     name: Potato Slime
     pixelLightCount: 0
@@ -189,9 +187,7 @@ QualitySettings:
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
     customRenderPipeline: {fileID: 0}
-    excludedTargetPlatforms:
-    - Windows Store Apps
-    - Standalone
+    excludedTargetPlatforms: []
   - serializedVersion: 2
     name: God Slime
     pixelLightCount: 4
