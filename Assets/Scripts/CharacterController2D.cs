@@ -19,6 +19,9 @@ public class CharacterController2D : MonoBehaviour
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
 
+	public GameObject GooPrefab;
+	public GameObject thisObject;
+
 	[Header("Events")]
 	[Space]
 
@@ -125,11 +128,16 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 		// If the player should jump...
-		if (m_Grounded && jump)
+		if (m_Grounded && jump && JumpForce >51f)
 		{
 			// Add a vertical force to the player.
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, JumpForce));
+			JumpForce -= 50f;
+			float radius = Mathf.Sqrt(JumpForce / Mathf.PI) / 6f+.25f;
+			thisObject.transform.localScale = new Vector3(radius, radius, 1f);
+			GameObject blob = Instantiate(GooPrefab) as GameObject;
+			blob.transform.position = new Vector3(GetComponent<Rigidbody2D>().position.x, GetComponent<Rigidbody2D>().position.y-.5f, 0f);
 		}
 	}
 
