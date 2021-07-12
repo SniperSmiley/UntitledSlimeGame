@@ -121,6 +121,7 @@ public class CharacterController2D : MonoBehaviour {
             m_Grounded = false;
             m_Rigidbody2D.AddForce(new Vector2(0f, JumpForce));
 
+
             PlayerAnimationScript.SwitchPlayerSize();
 
             //ShiftSize();
@@ -128,10 +129,10 @@ public class CharacterController2D : MonoBehaviour {
             //thisObject.transform.localScale = new Vector3(radius, radius, 1f);
 
             GameObject blob = Instantiate(GooPrefab);
-            Debug.Log("CREATED" + blob.name);
+           
             blob.transform.SetParent(GooStorage);
             blob.transform.position = new Vector3(GetComponent<Rigidbody2D>().position.x, GetComponent<Rigidbody2D>().position.y - .5f, 0f);
-
+            
 
         }
     }
