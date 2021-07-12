@@ -119,20 +119,41 @@ public class CharacterController2D : MonoBehaviour {
         if (m_Grounded && jump && JumpForce > 51f) {
             // Add a vertical force to the player.
             m_Grounded = false;
-            m_Rigidbody2D.AddForce(new Vector2(0f, JumpForce));
+
+            if (PlayerAnimationScript.CurrentSize - 1 >= 0) {
+                m_Rigidbody2D.AddForce(new Vector2(0f, JumpForce));
+
+                int last = PlayerAnimationScript.CurrentSize;
+                PlayerAnimationScript.SwitchPlayerSize();
+
+                //ShiftSize();
+                //float radius = Mathf.Sqrt(JumpForce / Mathf.PI) / 6f + .25f;
+                //thisObject.transform.localScale = new Vector3(radius, radius, 1f);
+             
+                StartCoroutine(SpawnBlob());
+                
+            }
 
 
-            PlayerAnimationScript.SwitchPlayerSize();
 
-            //ShiftSize();
-            //float radius = Mathf.Sqrt(JumpForce / Mathf.PI) / 6f + .25f;
-            //thisObject.transform.localScale = new Vector3(radius, radius, 1f);
 
+<<<<<<< Updated upstream
             GameObject blob = Instantiate(GooPrefab);
            
             blob.transform.SetParent(GooStorage);
             blob.transform.position = new Vector3(GetComponent<Rigidbody2D>().position.x, GetComponent<Rigidbody2D>().position.y - .5f, 0f);
             
+=======
+        }
+    }
+
+    public IEnumerator SpawnBlob() {
+
+        GameObject blob = Instantiate(GooPrefab);
+
+        blob.transform.SetParent(GooStorage);
+        blob.transform.position = new Vector3(GetComponent<Rigidbody2D>().position.x, GetComponent<Rigidbody2D>().position.y - .5f, 0f);
+>>>>>>> Stashed changes
 
         }
     }
@@ -148,20 +169,5 @@ public class CharacterController2D : MonoBehaviour {
         transform.localScale = theScale;
     }
 
-    // Assumes shrinking
-    public void ShiftSize(bool isShrinking = true) {
-        float radius = 1;
 
-        //radius = Mathf.Sqrt(JumpForce / Mathf.PI) / 6f + .25f; 
-
-        if (isShrinking) { radius = .8f;   JumpForce -= 50f; }
-
-        else { radius = 1.2f;   JumpForce += 50f; }
-
-
-
-        transform.localScale = transform.localScale * radius;
-
-       // transform.localScale = new Vector3(radius, radius, 1f);
-    }
 }

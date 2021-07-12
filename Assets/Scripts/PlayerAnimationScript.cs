@@ -69,13 +69,23 @@ public class PlayerAnimationScript : MonoBehaviour
         // if they successfully jump play start jump animation 
         // Jump is pressed, grounded and force in more than 50
         if (Input.GetButtonDown("Jump")) {
+<<<<<<< Updated upstream
              //Debug.Log("JUMP");
             if (Controller.JumpForce > 51 && Controller.m_Grounded) {
                 
+=======
+            //Debug.Log("JUMP");
+            if (Controller.JumpForce > 51 && Controller.m_Grounded && CurrentSize -1 >= 0) {
+
+>>>>>>> Stashed changes
                 startTime = Time.time;
                 anim.SetBool("isJumping", true); anim.SetBool("isGrounded", false);
                 inAir = true;
                 StartCoroutine(AudioManager.PlayEffect(JumpCLip));
+            }
+            else {
+
+                // PLAY FAILED JUMP
             }
         }
 
@@ -114,6 +124,11 @@ public class PlayerAnimationScript : MonoBehaviour
 
         }
 
+<<<<<<< Updated upstream
+=======
+        if (newSize == CurrentSize) { return; }
+        // Switch Animation Layer
+>>>>>>> Stashed changes
         Anim.SetLayerWeight(CurrentSize, 0f);
         Anim.SetLayerWeight(newSize, 1f);
 
