@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 505525}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FloorCheck
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -276,6 +276,7 @@ GameObject:
   - component: {fileID: 94348077}
   - component: {fileID: 94348076}
   - component: {fileID: 94348075}
+  - component: {fileID: 94348078}
   m_Layer: 0
   m_Name: Size4JUMPIDLE_2
   m_TagString: Untagged
@@ -367,6 +368,22 @@ Transform:
   m_Father: {fileID: 594845485}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &94348078
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94348074}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0005653153, y: 0.050457112}
+  serializedVersion: 2
+  m_Radius: 0.050145317
 --- !u!1 &353547351
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,6 +395,7 @@ GameObject:
   - component: {fileID: 353547354}
   - component: {fileID: 353547353}
   - component: {fileID: 353547352}
+  - component: {fileID: 353547355}
   m_Layer: 0
   m_Name: Size6IDLE_0
   m_TagString: Untagged
@@ -469,6 +487,22 @@ Transform:
   m_Father: {fileID: 594845485}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &353547355
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353547351}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0005653153, y: 0.06022664}
+  serializedVersion: 2
+  m_Radius: 0.05991484
 --- !u!1 &355103742
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,7 +521,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &355103743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,7 +590,7 @@ SpriteShapeRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355103742}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 0
@@ -662,7 +696,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 370327900}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CielingCheck
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -694,6 +728,7 @@ GameObject:
   - component: {fileID: 424204541}
   - component: {fileID: 424204543}
   - component: {fileID: 424204542}
+  - component: {fileID: 424204544}
   m_Layer: 0
   m_Name: Size1IDLEJUMP2_2
   m_TagString: Untagged
@@ -785,6 +820,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &424204544
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424204540}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0005653153, y: 0.03520309}
+  serializedVersion: 2
+  m_Radius: 0.03489135
 --- !u!1 &444089270
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,6 +847,7 @@ GameObject:
   - component: {fileID: 444089273}
   - component: {fileID: 444089272}
   - component: {fileID: 444089271}
+  - component: {fileID: 444089274}
   m_Layer: 0
   m_Name: Size3JUMPIDLE_2
   m_TagString: Untagged
@@ -887,6 +939,22 @@ Transform:
   m_Father: {fileID: 594845485}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &444089274
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444089270}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0005653153, y: 0.04467111}
+  serializedVersion: 2
+  m_Radius: 0.044359315
 --- !u!1 &498837437
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,12 +1031,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 589101634}
+  - component: {fileID: 589101632}
   - component: {fileID: 589101633}
   - component: {fileID: 589101636}
   - component: {fileID: 589101637}
   - component: {fileID: 589101635}
-  - component: {fileID: 589101632}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Slime
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1086,7 +1154,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589101631}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1113,7 +1181,7 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 9
+    m_Bits: 137
   m_GroundCheck: {fileID: 505525}
   m_CeilingCheck: {fileID: 370327900}
   m_CrouchDisableCollider: {fileID: 0}
@@ -1610,6 +1678,7 @@ GameObject:
   - component: {fileID: 1273466892}
   - component: {fileID: 1273466891}
   - component: {fileID: 1273466890}
+  - component: {fileID: 1273466893}
   m_Layer: 0
   m_Name: Size7IDLE_0
   m_TagString: Untagged
@@ -1701,6 +1770,22 @@ Transform:
   m_Father: {fileID: 594845485}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1273466893
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273466889}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0005653153, y: 0.06022661}
+  serializedVersion: 2
+  m_Radius: 0.05991487
 --- !u!1 &1381932122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1712,6 +1797,7 @@ GameObject:
   - component: {fileID: 1381932125}
   - component: {fileID: 1381932124}
   - component: {fileID: 1381932123}
+  - component: {fileID: 1381932126}
   m_Layer: 0
   m_Name: Size2JUMP_IDLE_2
   m_TagString: Untagged
@@ -1803,6 +1889,22 @@ Transform:
   m_Father: {fileID: 594845485}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1381932126
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381932122}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.04156314}
+  serializedVersion: 2
+  m_Radius: 0.037348986
 --- !u!1 &1452015240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1815,7 +1917,8 @@ GameObject:
   - component: {fileID: 1452015242}
   - component: {fileID: 1452015243}
   - component: {fileID: 1452015244}
-  m_Layer: 0
+  - component: {fileID: 1452015245}
+  m_Layer: 6
   m_Name: PlayerSize3_0
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1919,7 +2022,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartSize: 6
-  _JumpForceAtSizes: 64000000a0000000dc000000180100005401000090010000cc010000
+  _JumpForceAtSizes: c80000002c010000c201000058020000bc020000520300004c040000
+  _GravityAtSizes:
+  - 2
+  - 2.5
+  - 3.5
+  - 4.5
+  - 5.5
+  - 7
+  - 6
+  _ColliderRadiusAtSizes:
+  - 0.035
+  - 0.0374
+  - 0.044
+  - 0.05
+  - 0.0543
+  - 0.0599
+  - 0.0599
+  _collidersOffsetFromGround: 0.001
   CurrentSizeDispaly: 0
   JumpCLip: {fileID: 8300000, guid: 126b3db5e003032408ad3bd6ee8c9ea7, type: 3}
   LandingSounds:
@@ -1930,6 +2050,24 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f9be5410de2dfa14ab273c536ae99caf, type: 3}
   - {fileID: 8300000, guid: 243a1ae6170b3ca4cb77f0df865cf248, type: 3}
   anim: {fileID: 1452015243}
+  coll: {fileID: 589101636}
+  _rig: {fileID: 589101635}
+--- !u!58 &1452015245
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452015240}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0, y: 0.055347197}
+  serializedVersion: 2
+  m_Radius: 0.046983153
 --- !u!1 &1678309726
 GameObject:
   m_ObjectHideFlags: 0
@@ -1941,6 +2079,7 @@ GameObject:
   - component: {fileID: 1678309729}
   - component: {fileID: 1678309728}
   - component: {fileID: 1678309727}
+  - component: {fileID: 1678309730}
   m_Layer: 0
   m_Name: Size5IDLE_0
   m_TagString: Untagged
@@ -2032,6 +2171,22 @@ Transform:
   m_Father: {fileID: 594845485}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1678309730
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678309726}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0005653153, y: 0.05466511}
+  serializedVersion: 2
+  m_Radius: 0.054353315
 --- !u!1 &1777426192
 GameObject:
   m_ObjectHideFlags: 0

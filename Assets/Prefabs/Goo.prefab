@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4338377542523361209}
   - component: {fileID: 1289744016266865833}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 190321325274354674}
   - component: {fileID: 5797051471935507933}
   - component: {fileID: 7707243584355680313}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Goo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &7707243584355680313
 MonoBehaviour:
