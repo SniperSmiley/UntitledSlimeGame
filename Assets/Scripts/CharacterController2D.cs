@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -128,13 +129,23 @@ public class CharacterController2D : MonoBehaviour {
             //float radius = Mathf.Sqrt(JumpForce / Mathf.PI) / 6f + .25f;
             //thisObject.transform.localScale = new Vector3(radius, radius, 1f);
 
-            GameObject blob = Instantiate(GooPrefab);
-           
-            blob.transform.SetParent(GooStorage);
-            blob.transform.position = new Vector3(GetComponent<Rigidbody2D>().position.x, GetComponent<Rigidbody2D>().position.y - .5f, 0f);
-            
-
+             StartCoroutine(SpawnBlob());
         }
+    }
+
+    public IEnumerator SpawnBlob() {
+
+        GameObject blob = Instantiate(GooPrefab);
+            
+        blob.transform.SetParent(GooStorage);
+        blob.transform.position = new Vector3(GetComponent<Rigidbody2D>().position.x, GetComponent<Rigidbody2D>().position.y - .5f, 0f);
+
+        // Ignore cols with it 
+        Physics2D.IgnoreLayerCollision(6, 7, true);
+
+        yield return new WaitForSeconds(.2f);
+
+        Physics2D.IgnoreLayerCollision(6, 7, false);
     }
 
 
