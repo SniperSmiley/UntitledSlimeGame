@@ -50,7 +50,7 @@ public class AudioManager : MonoBehaviour {
         if (_audioSource == null) { Debug.Log("Audio source ran out of sources."); }
         else {
 
-            Debug.Log("Play");
+            //Debug.Log("Play");
             _audioSource.clip = clip;
             _audioSource.Play();
 

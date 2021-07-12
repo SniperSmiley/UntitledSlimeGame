@@ -134,3 +134,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 644e87574c3a8bb4d84a03542a0da316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimeDelayUntillPickUp: 1
