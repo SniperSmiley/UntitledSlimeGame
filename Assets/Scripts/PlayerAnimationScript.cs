@@ -88,7 +88,7 @@ public class PlayerAnimationScript : MonoBehaviour {
         // Jump is pressed, grounded and force in more than 50
         if (Input.GetButtonDown("Jump")) {
             //Debug.Log("JUMP");
-            if (Controller.JumpForce > 51 && Controller.m_Grounded) {
+            if (Controller.JumpForce > 51 && Controller.m_Grounded && CurrentSize - 1 >= 0) {
 
                 startTime = Time.time;
                 anim.SetBool("isJumping", true); anim.SetBool("isGrounded", false);
@@ -128,6 +128,8 @@ public class PlayerAnimationScript : MonoBehaviour {
 
     //  Actually makes the adjustments all in one func. ( ONly called if the cahnge is elegible )
     public static void AdjustSlime(int newSize) {
+
+        if (CurrentSize == newSize) { return; }
 
         // Switch Animation Layer
         Anim.SetLayerWeight(CurrentSize, 0f);
