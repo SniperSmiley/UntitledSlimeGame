@@ -1921,7 +1921,7 @@ MonoBehaviour:
   StartSize: 6
   _JumpForceAtSizes: 64000000a0000000dc000000180100005401000090010000cc010000
   CurrentSizeDispaly: 0
-  JumpCLip: {fileID: 8300000, guid: ca25a6a71be15294e919bf7bf1f6add9, type: 3}
+  JumpCLip: {fileID: 8300000, guid: 126b3db5e003032408ad3bd6ee8c9ea7, type: 3}
   LandingSounds:
   - {fileID: 8300000, guid: 102d979c615db7346aff47d54c1a38fd, type: 3}
   - {fileID: 8300000, guid: a299f382e526f264e892bd92ad0c5559, type: 3}
