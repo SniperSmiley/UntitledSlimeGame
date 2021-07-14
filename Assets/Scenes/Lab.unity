@@ -2269,5 +2269,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 4367811563351011393, guid: 8547e279528cc354390a6962348787be, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4367811563520001966, guid: 8547e279528cc354390a6962348787be, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4367811564601686141, guid: 8547e279528cc354390a6962348787be, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8547e279528cc354390a6962348787be, type: 3}
+--- !u!1 &4367811563351361270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4367811562765434058, guid: 8547e279528cc354390a6962348787be, type: 3}
+  m_PrefabInstance: {fileID: 4367811563351361269}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4367811563351361271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4367811563351361270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6967cdf834abb9b4c918cdd7a07b27d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -54,7 +54,7 @@ public class PlayerAnimationScript : MonoBehaviour {
         JumpForceAtSize = _JumpForceAtSizes;
 
         try {
-            Player = GameObject.FindGameObjectWithTag("Player");
+            Player = transform.parent.gameObject;
             Controller = Player.GetComponent<CharacterController2D>();
             Rig = Player.GetComponent<Rigidbody2D>();
             Col = transform.GetComponent<CircleCollider2D>();
