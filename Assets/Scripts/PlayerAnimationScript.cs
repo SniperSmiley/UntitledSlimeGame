@@ -65,14 +65,16 @@ public class PlayerAnimationScript : MonoBehaviour {
         }
     }
 
-
+    
 
     private void Start() {
         SwitchPlayerSize(StartSize);
+        Debug.Log("RAN");
     }
 
     // Update is called once per frame
     void Update() {
+
         CurrentSizeDispaly = CurrentSize;
         // TEST
 
@@ -88,12 +90,15 @@ public class PlayerAnimationScript : MonoBehaviour {
         // Jump is pressed, grounded and force in more than 50
         if (Input.GetButtonDown("Jump")) {
             //Debug.Log("JUMP");
-            if (Controller.JumpForce > 51 && Controller.m_Grounded && CurrentSize - 1 >= 0) {
+            if (Controller.JumpForce > 51 && Controller.m_Grounded) {
 
+           
                 startTime = Time.time;
                 anim.SetBool("isJumping", true); anim.SetBool("isGrounded", false);
                 inAir = true;
                 StartCoroutine(AudioManager.PlayEffect(JumpCLip));
+                
+              
             }
         }
 
@@ -129,11 +134,13 @@ public class PlayerAnimationScript : MonoBehaviour {
     //  Actually makes the adjustments all in one func. ( ONly called if the cahnge is elegible )
     public static void AdjustSlime(int newSize) {
 
-        if (CurrentSize == newSize) { return; }
+       
 
         // Switch Animation Layer
         Anim.SetLayerWeight(CurrentSize, 0f);
         Anim.SetLayerWeight(newSize, 1f);
+
+        if (CurrentSize == newSize) { return; }
 
         // New jump heights
         Controller.JumpForce = JumpForceAtSize[newSize];
