@@ -349,7 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bc9e6c05ccbd52499968e83d4a911f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartSize: 6
+  StartSize: 4
   _JumpForceAtSizes: c80000002c010000c201000058020000bc020000520300004c040000
   _GravityAtSizes:
   - 2
