@@ -88,7 +88,7 @@ public class PlayerAnimationScript : MonoBehaviour {
         // Jump is pressed, grounded and force in more than 50
         if (Input.GetButtonDown("Jump")) {
             //Debug.Log("JUMP");
-            if (Controller.JumpForce > 51 && Controller.m_Grounded && CurrentSize - 1 >= 0) {
+            if (Controller.JumpForce > 51 && Controller.m_Grounded) {
 
                 startTime = Time.time;
                 anim.SetBool("isJumping", true); anim.SetBool("isGrounded", false);
@@ -134,6 +134,8 @@ public class PlayerAnimationScript : MonoBehaviour {
         // Switch Animation Layer
         Anim.SetLayerWeight(CurrentSize, 0f);
         Anim.SetLayerWeight(newSize, 1f);
+
+        if (CurrentSize == newSize) { return; }
 
         // New jump heights
         Controller.JumpForce = JumpForceAtSize[newSize];
