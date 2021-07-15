@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 181040023}
   - component: {fileID: 181040022}
   m_Layer: 8
-  m_Name: Square (1)
+  m_Name: LeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -375,7 +375,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181040020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.17, y: 0, z: 0}
+  m_LocalPosition: {x: -32.14, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 10.25, z: 1}
   m_Children: []
   m_Father: {fileID: 758567982}
@@ -935,8 +935,8 @@ Transform:
   m_Children:
   - {fileID: 1062919724}
   - {fileID: 181040021}
-  - {fileID: 1599322384}
   - {fileID: 886414025}
+  - {fileID: 1599322384}
   m_Father: {fileID: 148821360}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1184,7 +1184,7 @@ GameObject:
   - component: {fileID: 886414027}
   - component: {fileID: 886414026}
   m_Layer: 0
-  m_Name: Square (3)
+  m_Name: RightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1202,7 +1202,7 @@ Transform:
   m_LocalScale: {x: 1, y: 10.25, z: 1}
   m_Children: []
   m_Father: {fileID: 758567982}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &886414026
 BoxCollider2D:
@@ -1457,7 +1457,7 @@ GameObject:
   - component: {fileID: 1062919723}
   - component: {fileID: 1062919725}
   m_Layer: 3
-  m_Name: Square
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2050,10 +2050,10 @@ Transform:
   m_LocalScale: {x: 1, y: 10.25, z: 1}
   m_Children: []
   m_Father: {fileID: 758567982}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1599322385
-BoxCollider2D:
+--- !u!60 &1599322385
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2075,9 +2075,13 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.19804382, y: 0.54208404}
+      - {x: -0.111774445, y: -0.52525043}
+      - {x: 45.761913, y: -0.51993763}
+      - {x: 45.752884, y: 0.5362393}
+      - {x: 0.4137287, y: 0.5378756}
 --- !u!212 &1599322386
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2302,11 +2306,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6035669470775195064, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -35.530697
+      value: -32.230396
       objectReference: {fileID: 0}
     - target: {fileID: 6035669470775195064, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.9761567
+      value: -4.9501324
       objectReference: {fileID: 0}
     - target: {fileID: 6035669470983910312, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
       propertyPath: m_Name
@@ -2359,11 +2363,11 @@ PrefabInstance:
     - target: {fileID: 6810716629269880885, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
       propertyPath: m_BoundingShape2D
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1599322385}
     - target: {fileID: 6810716629434412590, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 1169218301}
+      objectReference: {fileID: 0}
     - target: {fileID: 6810716629434412590, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
       propertyPath: m_AnimatedTarget
       value: 
@@ -2379,7 +2383,7 @@ PrefabInstance:
     - target: {fileID: 6810716629831905217, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
       propertyPath: m_BoundingShape2D
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1599322385}
     - target: {fileID: 6810716630681986144, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
       propertyPath: m_Follow
       value: 
