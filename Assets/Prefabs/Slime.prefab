@@ -173,9 +173,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4367811564601686140}
+  - component: {fileID: 4367811564601686137}
   - component: {fileID: 4367811564601686143}
   - component: {fileID: 4367811564601686142}
-  - component: {fileID: 4367811564601686137}
   - component: {fileID: 4367811564601686136}
   m_Layer: 6
   m_Name: PlayerSize3_0
@@ -198,6 +198,49 @@ Transform:
   m_Father: {fileID: 4367811562765434039}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4367811564601686137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4367811564601686141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bc9e6c05ccbd52499968e83d4a911f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartSize: 4
+  _JumpForceAtSizes: c80000002c010000c201000058020000bc020000520300004c040000
+  _GravityAtSizes:
+  - 2
+  - 2.5
+  - 3.5
+  - 4.5
+  - 5.5
+  - 7
+  - 6
+  _ColliderRadiusAtSizes:
+  - 0.035
+  - 0.0374
+  - 0.044
+  - 0.05
+  - 0.0543
+  - 0.0599
+  - 0.0599
+  _collidersOffsetFromGround: 0.001
+  CurrentSizeDispaly: 0
+  JumpCLip: {fileID: 8300000, guid: 126b3db5e003032408ad3bd6ee8c9ea7, type: 3}
+  LandingSounds:
+  - {fileID: 8300000, guid: 102d979c615db7346aff47d54c1a38fd, type: 3}
+  - {fileID: 8300000, guid: a299f382e526f264e892bd92ad0c5559, type: 3}
+  - {fileID: 8300000, guid: bcb86fbfe9142954590bfc8d013d3092, type: 3}
+  - {fileID: 8300000, guid: 2ab69755dded4c04d9a77748db977f17, type: 3}
+  - {fileID: 8300000, guid: f9be5410de2dfa14ab273c536ae99caf, type: 3}
+  - {fileID: 8300000, guid: 243a1ae6170b3ca4cb77f0df865cf248, type: 3}
+  anim: {fileID: 4367811564601686142}
+  coll: {fileID: 4367811562765434033, guid: 8547e279528cc354390a6962348787be, type: 3}
+  _rig: {fileID: 4367811562765434038}
 --- !u!212 &4367811564601686143
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -268,49 +311,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4367811564601686137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4367811564601686141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bc9e6c05ccbd52499968e83d4a911f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartSize: 4
-  _JumpForceAtSizes: c80000002c010000c201000058020000bc020000520300004c040000
-  _GravityAtSizes:
-  - 2
-  - 2.5
-  - 3.5
-  - 4.5
-  - 5.5
-  - 7
-  - 6
-  _ColliderRadiusAtSizes:
-  - 0.035
-  - 0.0374
-  - 0.044
-  - 0.05
-  - 0.0543
-  - 0.0599
-  - 0.0599
-  _collidersOffsetFromGround: 0.001
-  CurrentSizeDispaly: 0
-  JumpCLip: {fileID: 8300000, guid: 126b3db5e003032408ad3bd6ee8c9ea7, type: 3}
-  LandingSounds:
-  - {fileID: 8300000, guid: 102d979c615db7346aff47d54c1a38fd, type: 3}
-  - {fileID: 8300000, guid: a299f382e526f264e892bd92ad0c5559, type: 3}
-  - {fileID: 8300000, guid: bcb86fbfe9142954590bfc8d013d3092, type: 3}
-  - {fileID: 8300000, guid: 2ab69755dded4c04d9a77748db977f17, type: 3}
-  - {fileID: 8300000, guid: f9be5410de2dfa14ab273c536ae99caf, type: 3}
-  - {fileID: 8300000, guid: 243a1ae6170b3ca4cb77f0df865cf248, type: 3}
-  anim: {fileID: 4367811564601686142}
-  coll: {fileID: 4367811562765434033, guid: 8547e279528cc354390a6962348787be, type: 3}
-  _rig: {fileID: 4367811562765434038}
 --- !u!58 &4367811564601686136
 CircleCollider2D:
   m_ObjectHideFlags: 0

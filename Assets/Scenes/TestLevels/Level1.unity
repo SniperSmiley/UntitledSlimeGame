@@ -1612,6 +1612,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 4367811564601686141, guid: 8547e279528cc354390a6962348787be, type: 3}
+      propertyPath: m_Name
+      value: Character
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8547e279528cc354390a6962348787be, type: 3}
 --- !u!4 &1169218301 stripped
