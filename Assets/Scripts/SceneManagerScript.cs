@@ -5,7 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagerScript : MonoBehaviour
 {
-   public void StartGame() {
+    public static SceneManagerScript manager;
+
+    private void Awake() {
+        if (manager != null) { Destroy(this); }
+        else { manager = this; }
+    }
+
+    public void StartGame() {
         SceneManager.LoadScene(1); 
     } 
 

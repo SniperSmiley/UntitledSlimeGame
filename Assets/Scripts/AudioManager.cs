@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour {
+
+    public static AudioManager manager;
+
     // Play background music, manage what clips are being played in general. 
     public GameObject SoundEffectsGo;
     public AudioSource maintrack;
@@ -19,6 +22,10 @@ public class AudioManager : MonoBehaviour {
     public List<AudioClip> InteractionAudioClips;
 
     private void Awake() {
+
+        if (manager != null) { Destroy(this); }
+        else { manager = this; }
+
         AudioSource source;
         for (int i = 0; i < NumberOfAudioSources; i++) {
             source = SoundEffectsGo.AddComponent<AudioSource>();
