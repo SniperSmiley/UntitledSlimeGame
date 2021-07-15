@@ -1554,6 +1554,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.3916936}
   m_EdgeRadius: 0
+--- !u!1 &1093465186 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8147569061256727281, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
+  m_PrefabInstance: {fileID: 1852778781}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1093465190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093465186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d70cc20219cd84593f67d248eafe36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Offset: {x: 0, y: 0.2, z: 0}
+  m_ApplyAfter: 0
+  m_PreserveComposition: 0
 --- !u!1001 &1169218300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2031,7 +2051,7 @@ GameObject:
   - component: {fileID: 1599322384}
   - component: {fileID: 1599322386}
   - component: {fileID: 1599322385}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Square (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2306,11 +2326,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6035669470775195064, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.230396
+      value: -31.304
       objectReference: {fileID: 0}
     - target: {fileID: 6035669470775195064, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.9501324
+      value: -4.9428267
       objectReference: {fileID: 0}
     - target: {fileID: 6035669470983910312, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
       propertyPath: m_Name
@@ -2392,6 +2412,14 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1169218301}
+    - target: {fileID: 8147569061256727282, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147569061256727283, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10.406314
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
 --- !u!1 &1914929024
