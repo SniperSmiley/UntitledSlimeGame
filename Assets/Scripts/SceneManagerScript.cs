@@ -12,4 +12,8 @@ public class SceneManagerScript : MonoBehaviour
     public void LevelTwo() {
         SceneManager.LoadScene(2);
     }
+
+    public static void ExitToMeu() {
+        SceneManager.LoadScene(0);
+    }
 }

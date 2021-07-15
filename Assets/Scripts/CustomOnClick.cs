@@ -39,6 +39,7 @@ public class CustomOnClick : MonoBehaviour
                 if (numClicks >= 5) { audioManager.PlayMMMMSoundEffect(); numClicks = 0; }
                 
                 break;
+            case 4: SceneManagerScript.ExitToMeu(); break;
 
             default:
                 break;
