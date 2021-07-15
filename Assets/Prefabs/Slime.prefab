@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 4367811564601686142}
   - component: {fileID: 4367811564601686136}
   m_Layer: 6
-  m_Name: PlayerSize3_0
+  m_Name: Character
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -239,7 +239,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f9be5410de2dfa14ab273c536ae99caf, type: 3}
   - {fileID: 8300000, guid: 243a1ae6170b3ca4cb77f0df865cf248, type: 3}
   anim: {fileID: 4367811564601686142}
-  coll: {fileID: 4367811562765434033, guid: 8547e279528cc354390a6962348787be, type: 3}
+  coll: {fileID: 0}
   _rig: {fileID: 4367811562765434038}
 --- !u!212 &4367811564601686143
 SpriteRenderer:
