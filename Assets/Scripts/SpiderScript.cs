@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpiderScript : MonoBehaviour {
 
+    public AudioSource source;
+
     public Transform pos1;
     public Transform pos2;
 
@@ -16,11 +18,13 @@ public class SpiderScript : MonoBehaviour {
 
     public float AttackDist = 0.5f;
 
+    public float ForgetPlayerTime = 0.6f;
+
     public float SightForward = 5f;
     public LayerMask Mask;
 
-    private Transform curTarget;
-    private float timeStarted = 0f;
+    private Vector2 curTarget;
+    private float timeLostPlayer = 0f;
     private bool target = false; // default is pos 2
     private bool isChasingPlayer = false;
 
@@ -30,31 +34,33 @@ public class SpiderScript : MonoBehaviour {
     private bool colourRed = false;
     private SpriteRenderer rend;
 
+    private bool LostPlayer = false;
+
     RaycastHit2D ray;
 
     private bool Nope = false;
 
-
     // Start is called before the first frame update
     void Start() {
         rend = gameObject.GetComponent<SpriteRenderer>();
-        curTarget = pos2;
+        curTarget = pos2.position;
         lookDirection = -transform.right;
     }
 
     // Update is called once per frame
     void Update() {
+            
+        // Feeeling very out of it today.. sorrry for bad code xD
 
+        dist = transform.position.x - curTarget.x;
 
-
-        dist = transform.position.x - curTarget.position.x;
-        if (!Nope) {     FireRayAtPlayer(); }
+        if (!Nope) { FireRayAtPlayer(); }
    
 
         if (Mathf.Abs(dist) < minDistFromFlag && !isChasingPlayer) {
             // Switch targets
-            if (target) { curTarget = pos2; target = false; } // Debug.Log("Pos2"); }
-            else if (!target) { curTarget = pos1; target = true; } //Debug.Log("Pos1"); }
+            if (target) { curTarget = pos2.position; target = false; } // Debug.Log("Pos2"); }
+            else if (!target) { curTarget = pos1.position; target = true; } //Debug.Log("Pos1"); }
         }
 
         // Change colour
@@ -73,8 +79,14 @@ public class SpiderScript : MonoBehaviour {
         
          //st = transform.position.x - curTarget.position.x;
         // Maybe attack?
-        if (Mathf.Abs(dist) < AttackDist && isChasingPlayer) {
-            Attack(ray.collider.gameObject);
+        if ( isChasingPlayer) {
+            if (ray.collider.gameObject.tag == "Player") {
+             if ((ray.collider.gameObject.transform.position - transform.position ).magnitude < AttackDist) {
+                     Attack(ray.collider.gameObject);
+                }
+               
+            }
+        
         }
        
 
@@ -82,6 +94,8 @@ public class SpiderScript : MonoBehaviour {
     }
 
     private void Attack(GameObject player) {
+        
+        source.Play();
         Nope = true; isChasingPlayer = false;
         StartCoroutine(player.GetComponentInParent<OnDeathScript>().OnDeath());   
         
@@ -89,17 +103,45 @@ public class SpiderScript : MonoBehaviour {
 
     private void FireRayAtPlayer() {
         // Check if can see player.
-         ray = Physics2D.Raycast(RayFirePoint.position, lookDirection, SightForward, Mask); ;
+        ray = Physics2D.Raycast(RayFirePoint.position, lookDirection, SightForward, Mask);
+
 
         if (ray.collider != null) {
             //Debug.Log("HIt" + ray.collider.name);
             Debug.DrawRay(RayFirePoint.position, lookDirection * ray.distance, Color.red, .1f);
 
             // check if player
+            if (ray.collider.tag == "Player") { curTarget = ray.collider.transform.position; isChasingPlayer = true; LostPlayer = false; }
+
+            else {
+                if (isChasingPlayer)
+                { 
+                    if (LostPlayer) {
+                        if ( Time.time - timeLostPlayer > ForgetPlayerTime) {
+                             isChasingPlayer = false; curTarget = pos2.position;
+                            LostPlayer = false;
+                        }
+                    }
+                    else {
+                        LostPlayer = true;
+                        timeLostPlayer = Time.time;
+                    }
+
+                   
+                } 
+            }
+        }
+
+        else { Debug.DrawRay(RayFirePoint.position, lookDirection * SightForward, Color.red, .1f); if (isChasingPlayer) { isChasingPlayer = false; curTarget = pos2.position; } }
+
+        /*
+        if (ray2.collider != null) {
+            Debug.DrawRay(RayFirePoint.position, new Vector2(lookDirection.x, 0.7f) *  ray2.distance, Color.red, .1f);
+            // check if player
             if (ray.collider.tag == "Player") { curTarget = ray.collider.transform; isChasingPlayer = true; }
             else { if (isChasingPlayer) { isChasingPlayer = false; curTarget = pos2; } }
         }
-        else { Debug.DrawRay(RayFirePoint.position, lookDirection * SightForward, Color.red, .1f); if (isChasingPlayer) { isChasingPlayer = false; curTarget = pos2; } }
+        else { Debug.DrawRay(RayFirePoint.position, new Vector2(lookDirection.x, 0.7f) *  SightForward, Color.red, .1f); if (isChasingPlayer) { isChasingPlayer = false; curTarget = pos2; } }*/
     }
 
     private void MoveSpider() {
@@ -114,7 +156,7 @@ public class SpiderScript : MonoBehaviour {
         if (isChasingPlayer) { step = RunSpeed * Time.deltaTime; }
         else {step = NormalSpeed * Time.deltaTime; }
  
-        transform.position = Vector3.MoveTowards(transform.position, new Vector3(curTarget.position.x,transform.position.y, transform.position.z), step);
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(curTarget.x,transform.position.y, transform.position.z), step);
 
     }
 
