@@ -44,7 +44,7 @@ public class SpiderScript : MonoBehaviour {
         RaycastHit2D ray = Physics2D.Raycast(RayFirePoint.position, lookDirection, SightForward, Mask); ;
 
         if (ray.collider != null) {
-            Debug.Log("HIt" + ray.collider.name);
+            //Debug.Log("HIt" + ray.collider.name);
             Debug.DrawRay(RayFirePoint.position, lookDirection * ray.distance, Color.red, .1f);
 
             // check if player
@@ -55,8 +55,8 @@ public class SpiderScript : MonoBehaviour {
 
         if (Mathf.Abs(dist) < minDistFromFlag && !isChasingPlayer) {
             // Switch targets
-            if (target) { curTarget = pos2; target = false; Debug.Log("Pos2"); }
-            else if (!target) { curTarget = pos1; target = true; Debug.Log("Pos1"); }
+            if (target) { curTarget = pos2; target = false; } // Debug.Log("Pos2"); }
+            else if (!target) { curTarget = pos1; target = true; } //Debug.Log("Pos1"); }
         }
 
 
