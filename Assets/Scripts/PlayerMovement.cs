@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour {
     public float horizontalMove = 0f;
     bool jump = false;
 
+    public bool MovementLocked = false;
+
     // Update is called once per frame
     void Update() {
 
@@ -28,6 +30,9 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     void FixedUpdate() {
+
+        if (MovementLocked) { return; }
+
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
         jump = false;
    

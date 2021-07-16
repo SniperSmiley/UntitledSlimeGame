@@ -11,7 +11,7 @@ public class CustomOnClick : MonoBehaviour
     public int Mode = 0;
     private int numClicks = 0;
 
-    [Header("0 : If switching scene")]
+    [Header("0 : If switching menu")]
     [Tooltip("0: MainMenu 1: Options 2: Start ")]
     public MenuManager MenuManager;
     public int MenuToSwitchTo;
@@ -21,6 +21,15 @@ public class CustomOnClick : MonoBehaviour
 
     [Header("2 : Just play sound effect")]
     public string Ignore2;
+
+    
+    [Header("3 : Just play sound effect")]
+    public string Ignore3;
+    
+    [Header("4 : Switching Scene")]
+    [Tooltip("0: StartMenu , 1 : level 1  etc ")]
+    public int SceneToSwitchTo;
+
         
     private void Awake() {
         CustomButton.onClick.AddListener(CustomButtonOnClick);
@@ -39,7 +48,11 @@ public class CustomOnClick : MonoBehaviour
                 if (numClicks >= 5) { audioManager.PlayMMMMSoundEffect(); numClicks = 0; }
                 
                 break;
-            case 4: SceneManagerScript.ExitToMeu(); break;
+
+            case 4: 
+                SceneManagerScript.manager.SwitchScene(SceneToSwitchTo); 
+
+                break;
 
             default:
                 break;

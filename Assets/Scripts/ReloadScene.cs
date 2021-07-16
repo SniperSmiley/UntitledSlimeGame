@@ -16,7 +16,12 @@ public class ReloadScene : MonoBehaviour
     {
         if (Input.GetKeyDown("r"))
         { //If you press R
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name); //Load scene called Game
+            Reload(); //Load scene called Game
         }
     }
+
+    public void Reload() {
+         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
 }

@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 4367811562765434039}
   - component: {fileID: 4367811562765434037}
   - component: {fileID: 4367811562765434032}
+  - component: {fileID: 2231314078582987447}
   - component: {fileID: 4367811562765434038}
+  - component: {fileID: 596168898}
   m_Layer: 6
   m_Name: Slime
   m_TagString: Player
@@ -83,6 +85,18 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2231314078582987447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4367811562765434058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6967cdf834abb9b4c918cdd7a07b27d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &4367811562765434038
 Rigidbody2D:
   serializedVersion: 4
@@ -104,6 +118,20 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &596168898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4367811562765434058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f7a8e7a86cfe84f943013a8d384f2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeathEffect: {fileID: 7408449162246178260, guid: 13b2da5887e33534ba108a46b0ed6a0c, type: 3}
+  DeathAudioClips: []
 --- !u!1 &4367811563351011393
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +206,7 @@ GameObject:
   - component: {fileID: 4367811564601686142}
   - component: {fileID: 4367811564601686136}
   m_Layer: 6
-  m_Name: PlayerSize3_0
+  m_Name: Character
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -239,7 +267,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f9be5410de2dfa14ab273c536ae99caf, type: 3}
   - {fileID: 8300000, guid: 243a1ae6170b3ca4cb77f0df865cf248, type: 3}
   anim: {fileID: 4367811564601686142}
-  coll: {fileID: 4367811562765434033, guid: 8547e279528cc354390a6962348787be, type: 3}
+  coll: {fileID: 0}
   _rig: {fileID: 4367811562765434038}
 --- !u!212 &4367811564601686143
 SpriteRenderer:

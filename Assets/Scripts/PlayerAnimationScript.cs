@@ -63,12 +63,14 @@ public class PlayerAnimationScript : MonoBehaviour {
             Debug.LogError("ERROR : PLAYERANIMATIONSCRIPT - COULD NOT FIND PLAYER OR CONTROLLER");
             throw;
         }
+
+        SwitchPlayerSize(StartSize);
     }
 
 
 
     private void Start() {
-        SwitchPlayerSize(StartSize);
+        
     }
 
     // Update is called once per frame
@@ -129,13 +131,9 @@ public class PlayerAnimationScript : MonoBehaviour {
     //  Actually makes the adjustments all in one func. ( ONly called if the cahnge is elegible )
     public static void AdjustSlime(int newSize) {
 
-        if (CurrentSize == newSize) { return; }
-
         // Switch Animation Layer
         Anim.SetLayerWeight(CurrentSize, 0f);
         Anim.SetLayerWeight(newSize, 1f);
-
-        if (CurrentSize == newSize) { return; }
 
         // New jump heights
         Controller.JumpForce = JumpForceAtSize[newSize];
