@@ -1640,6 +1640,10 @@ PrefabInstance:
       propertyPath: GooStorage
       value: 
       objectReference: {fileID: 915434831}
+    - target: {fileID: 4367811562765434038, guid: 8547e279528cc354390a6962348787be, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6ab8788da77698240a3b78bc31ff452b, type: 2}
     - target: {fileID: 4367811562765434039, guid: 8547e279528cc354390a6962348787be, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1940,6 +1944,7 @@ MonoBehaviour:
   RunSpeed: 9
   NormalSpeed: 2
   AttackDist: 0.7
+  ForgetPlayerTime: 0.6
   SightForward: 8
   Mask:
     serializedVersion: 2
