@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4367811562765434039}
   - component: {fileID: 4367811562765434037}
   - component: {fileID: 4367811562765434032}
+  - component: {fileID: 2231314078582987447}
   - component: {fileID: 4367811562765434038}
   m_Layer: 6
   m_Name: Slime
@@ -83,6 +84,18 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2231314078582987447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4367811562765434058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6967cdf834abb9b4c918cdd7a07b27d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &4367811562765434038
 Rigidbody2D:
   serializedVersion: 4
