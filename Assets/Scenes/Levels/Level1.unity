@@ -712,7 +712,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 224402849}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0388, y: 0, z: 0}
+  m_LocalPosition: {x: -0.0388, y: -0.054, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1147675750}
@@ -1716,7 +1716,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 30a0925906d1c7e48b466944fde76b1b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 808b3de8713514edda72ed999bbb3441, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1812,9 +1812,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9d0142bde6ee9a844a4fca1ac0e4a4b3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 463684b69c5bc46a0af64d5d2ecbb3da, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.82
+  m_Volume: 0.9
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1914,7 +1914,7 @@ MonoBehaviour:
   pos1: {fileID: 1269814707}
   pos2: {fileID: 888591769}
   RayFirePoint: {fileID: 224402850}
-  minDistFromFlag: 0.15
+  minDistFromFlag: 1
   RunSpeed: 9
   NormalSpeed: 2
   AttackDist: 0.7
@@ -2046,11 +2046,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4367811562765434039, guid: 8547e279528cc354390a6962348787be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.89
+      value: -27.38
       objectReference: {fileID: 0}
     - target: {fileID: 4367811562765434039, guid: 8547e279528cc354390a6962348787be, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.946
+      value: -1.67
       objectReference: {fileID: 0}
     - target: {fileID: 4367811562765434039, guid: 8547e279528cc354390a6962348787be, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2833,6 +2833,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6035669470775195064, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -31.868614
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035669470775195064, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.123541
+      objectReference: {fileID: 0}
     - target: {fileID: 6035669470983910312, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
       propertyPath: m_Name
       value: Cameras
@@ -2901,10 +2909,26 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1169218301}
+    - target: {fileID: 6810716630681986145, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -44.661396
+      objectReference: {fileID: 0}
+    - target: {fileID: 6810716630681986145, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10.042315
+      objectReference: {fileID: 0}
     - target: {fileID: 8147569061256727282, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1169218301}
+    - target: {fileID: 8147569061256727283, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -44.661396
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147569061256727283, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10.042315
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
 --- !u!1 &1914929024
