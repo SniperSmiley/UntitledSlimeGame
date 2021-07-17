@@ -103,13 +103,13 @@ public class RatScript : MonoBehaviour
                 }
             }
 
-            bool deathScript = FindObjectOfType<OnDeathScript>().dead;
-            if (deathScript)
+            //bool deathScript = FindObjectOfType<OnDeathScript>().dead;
+           /* if (deathScript)
             {
                 source.Play();
                 Nope = true; isChasingPlayer = false;
                 StartCoroutine(player.GetComponentInParent<OnDeathScript>().OnDeath());
-            }
+            }*/
 
         }
 

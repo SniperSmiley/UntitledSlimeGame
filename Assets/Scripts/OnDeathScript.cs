@@ -18,7 +18,6 @@ public class OnDeathScript : MonoBehaviour
 
     private ReloadScene reload;
 
-    public bool dead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -34,10 +33,6 @@ public class OnDeathScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P)) {
             StartCoroutine(OnDeath());
-        }
-        if (enemyCollider.IsTouchingLayers(LayerMask.GetMask("Player")))
-        {
-            dead = true;
         }
     }
 
