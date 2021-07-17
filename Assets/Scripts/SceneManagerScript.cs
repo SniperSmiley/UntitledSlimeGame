@@ -7,7 +7,7 @@ public class SceneManagerScript : MonoBehaviour
 {
     public static SceneManagerScript manager;
 
-    public delegate void OnSceneChangeEvent();
+    public delegate void OnSceneChangeEvent(int Scene);
     public static event OnSceneChangeEvent SceneChanged;
 
     public enum Scenes{
@@ -26,31 +26,20 @@ public class SceneManagerScript : MonoBehaviour
         else { manager = this; }
     }
 
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.L)) {
+            SwitchScene((int) GameManagerScript.manager.CurScene + 1);
+        }
+    }
+
 
     public void SwitchScene(int SceneToSwitchTo) {
         SceneManager.LoadScene(SceneToSwitchTo);
-        SceneChanged();
+        SceneChanged(SceneToSwitchTo);
     }
 
 
     // CUrrently a very cheaty method. All below should be squished into one function.
 
-    public void StartGame() {
-        SceneManager.LoadScene(1);
-        SceneSwitch();
-    } 
-
-    public void LevelTwo() {
-        SceneManager.LoadScene(2);
-        SceneSwitch();
-    }
-
-    public  void ExitToMenu() {
-        SceneManager.LoadScene(0);
-        SceneSwitch();
-    }
-
-    private void SceneSwitch() {
-        SceneChanged();
-    }
+    
 }
