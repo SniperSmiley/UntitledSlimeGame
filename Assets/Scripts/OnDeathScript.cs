@@ -7,18 +7,23 @@ public class OnDeathScript : MonoBehaviour
     public ParticleSystem DeathEffect;
     public ParticleSystem DeathEffectSecond;
 
+    public PolygonCollider2D enemyCollider;
+
     public AudioClip[] DeathAudioClips;
 
     public SpriteRenderer CharacterSpriteRenderer;
     private PlayerMovement PlayerMovementScript;
     private Rigidbody2D rig;
+    private SpiderScript EnemyScript;
 
     private ReloadScene reload;
 
+    public bool dead = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        EnemyScript = GetComponent<SpiderScript>();
         PlayerMovementScript = GetComponent<PlayerMovement>();
         reload = GetComponent<ReloadScene>();
         rig = GetComponent<Rigidbody2D>();
@@ -29,6 +34,10 @@ public class OnDeathScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P)) {
             StartCoroutine(OnDeath());
+        }
+        if (enemyCollider.IsTouchingLayers(LayerMask.GetMask("Player")))
+        {
+            dead = true;
         }
     }
 
