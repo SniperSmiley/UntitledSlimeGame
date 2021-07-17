@@ -147,7 +147,7 @@ public class AudioManager : MonoBehaviour {
         mixer.GetFloat(exposedParameter, out currentVol);
         currentVol = Mathf.Pow(10, currentVol / 20);
 
-         Debug.Log("TEST " + currentVol);
+        // Debug.Log("TEST " + currentVol);
 
         float targetValue = Mathf.Clamp(targetVolume, 0.0001f, 1);
 
