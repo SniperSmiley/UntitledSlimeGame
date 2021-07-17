@@ -385,6 +385,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -4.9501324
       objectReference: {fileID: 0}
+    - target: {fileID: 6035669470775195065, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.1481769
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035669470775195065, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.9811321
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035669470775195065, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.14346743
+      objectReference: {fileID: 0}
     - target: {fileID: 6035669470775195066, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -778,7 +790,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1021978589
@@ -1002,7 +1014,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1681101240

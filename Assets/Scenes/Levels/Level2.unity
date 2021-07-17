@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269710806}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.8, y: 0, z: 0}
+  m_LocalPosition: {x: 15.5, y: -6.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 568772037}
@@ -294,12 +294,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 0e2b1883fbc78884f8ce37d29b27b255, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 45fe47ec325b6384c99d08fe39bf2793, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 15.14, y: 2.17}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -442,12 +442,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 101
-  m_Sprite: {fileID: 21300000, guid: dfe07832be574c54989d1c34b1924b15, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d0d03abf8847ff24d9b0aa1203ead567, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 15.14, y: 2.17}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -518,7 +518,7 @@ SpriteRenderer:
   m_Size: {x: 13.17, y: 1.05}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &748876841
@@ -606,12 +606,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a7b651a53d07b0741aaa49be4fc09151, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d92c3da31e93d204d979e4fbf3680f83, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 15.14, y: 2.17}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -626,11 +626,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6035669470775195064, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.240993
+      value: -29.341381
       objectReference: {fileID: 0}
     - target: {fileID: 6035669470775195064, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.1497526
+      value: -4.150011
       objectReference: {fileID: 0}
     - target: {fileID: 6035669470983910312, guid: 8c8281cbb5a6c4f67956d48fd587625c, type: 3}
       propertyPath: m_Name
@@ -839,7 +839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6072658918806693404, guid: b9975f5fc74a9449284758e01f6cb48b, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
-      value: 2.7432308
+      value: 2.7630844
       objectReference: {fileID: 0}
     - target: {fileID: 6072658918806693404, guid: b9975f5fc74a9449284758e01f6cb48b, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
@@ -847,27 +847,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6072658918806693404, guid: b9975f5fc74a9449284758e01f6cb48b, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
-      value: 2.903143
+      value: 2.7575474
       objectReference: {fileID: 0}
     - target: {fileID: 6072658918806693404, guid: b9975f5fc74a9449284758e01f6cb48b, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
-      value: -0.61052114
+      value: -0.6124581
       objectReference: {fileID: 0}
     - target: {fileID: 6072658918806693404, guid: b9975f5fc74a9449284758e01f6cb48b, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
-      value: 61.104042
+      value: 60.940098
       objectReference: {fileID: 0}
     - target: {fileID: 6072658918806693404, guid: b9975f5fc74a9449284758e01f6cb48b, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
-      value: -0.60418713
+      value: -0.60709524
       objectReference: {fileID: 0}
     - target: {fileID: 6072658918806693404, guid: b9975f5fc74a9449284758e01f6cb48b, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
-      value: 61.037033
+      value: 60.903297
       objectReference: {fileID: 0}
     - target: {fileID: 6072658918806693404, guid: b9975f5fc74a9449284758e01f6cb48b, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
-      value: 0.60734814
+      value: 0.6133699
       objectReference: {fileID: 0}
     - target: {fileID: 6072658918806693404, guid: b9975f5fc74a9449284758e01f6cb48b, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].x
@@ -1034,7 +1034,7 @@ SpriteRenderer:
   m_Size: {x: 13.17, y: 1.05}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2081204071
