@@ -5,6 +5,18 @@ using UnityEngine;
 public class GameManagerScript : MonoBehaviour
 {
     public static GameManagerScript manager;
+    public Scenes CurScene = 0;
+
+    public enum Scenes {
+        StartMenu,
+        Level1,
+        Level2,
+        Level3,
+        Level4,
+        Level5,
+        Level6
+    }
+
 
     private void Awake() {
         if (manager != null) { Destroy(this); }
@@ -19,8 +31,10 @@ public class GameManagerScript : MonoBehaviour
         
     }
 
-    void OnSceneChange() {
-        Debug.Log("Scene Changed called by Game manager");
+    void OnSceneChange(int Scene) {
+       // Debug.Log("Scene Changed called by Game manager");
+        CurScene = (Scenes)Scene;
+
 
 
     }
