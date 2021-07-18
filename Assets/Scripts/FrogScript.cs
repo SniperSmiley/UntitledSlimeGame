@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpiderScript : MonoBehaviour {
+public class FrogScript : MonoBehaviour {
 
     public AudioSource source;
 
@@ -37,11 +37,14 @@ public class SpiderScript : MonoBehaviour {
     private SpriteRenderer rend;
 
     private bool LostPlayer = false;
+    public bool attacking = false;
 
     public bool PlayAttackAnim = false;
     private Animator anim;
 
     RaycastHit2D ray;
+
+    private bool attackRoutineRUnning = false;
 
     public bool Nope = false;
 
@@ -58,7 +61,7 @@ public class SpiderScript : MonoBehaviour {
     // Update is called once per frame
     void Update() {
             
-        if (PlayAttackAnim) { anim.SetBool("Attack", false); } 
+     //   if (PlayAttackAnim) { anim.SetBool("Attack", false); } 
 
         // Feeeling very out of it today.. sorrry for bad code xD
 
@@ -92,27 +95,36 @@ public class SpiderScript : MonoBehaviour {
         if ( isChasingPlayer) {
             if (ray.collider.gameObject.tag == "Player") {
              if ((ray.collider.gameObject.transform.position - transform.position ).magnitude < AttackDist) {
-                     Attack(ray.collider.gameObject);
-                }
+                    if (!attackRoutineRUnning) { StartCoroutine(TryAttack()); attacking = true; attackRoutineRUnning = true; }
+                    
             }
-
-                bool deathScript = FindObjectOfType<OnDeathScript>().dead;
-            if (deathScript)
-            {
-                source.Play();
-                Nope = true; isChasingPlayer = false;
-                StartCoroutine(player.GetComponentInParent<OnDeathScript>().OnDeath());
-            }
-
+        }
         }
 
 
         MoveSpider();
     }
 
+    public IEnumerator TryAttack() {
+        anim.SetBool("Attack", true);
+        yield return new WaitForSeconds(.20f);
+        if (ray.collider != null) {
+             if (ray.collider.tag == "Player") {
+             if ((ray.collider.gameObject.transform.position - transform.position ).magnitude < AttackDist) {
+                Attack(ray.collider.gameObject);
+                    
+            }
+        }
+        }
+      
+        anim.SetBool("Attack", false); ;
+        attacking = false;
+        attackRoutineRUnning = false;      
+    }
+
     public void Attack(GameObject player) {
 
-             if (PlayAttackAnim) { anim.SetBool("Attack", true); }
+            if (PlayAttackAnim) { anim.SetBool("Attack", true); }
             source.Play();
             Nope = true; isChasingPlayer = false;
             StartCoroutine(player.GetComponentInParent<OnDeathScript>().OnDeath());
@@ -164,6 +176,8 @@ public class SpiderScript : MonoBehaviour {
     }
 
     private void MoveSpider() {
+
+        if (attacking) { return; }
 
         // Rotation
         if (dist > 0.1f) { if (transform.localScale.x < 0) { flip(); } }
