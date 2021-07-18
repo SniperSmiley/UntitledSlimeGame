@@ -8,6 +8,7 @@ public class SpiderScript : MonoBehaviour {
 
     public GameObject player;
 
+
     public Transform pos1;
     public Transform pos2;
 
@@ -50,7 +51,7 @@ public class SpiderScript : MonoBehaviour {
         rend = gameObject.GetComponent<SpriteRenderer>();
         curTarget = pos2.position;
         lookDirection = -transform.right;
-        anim = GetComponent<Animator>();
+
         
         
     }
@@ -112,7 +113,6 @@ public class SpiderScript : MonoBehaviour {
 
     public void Attack(GameObject player) {
 
-             if (PlayAttackAnim) { anim.SetBool("Attack", true); }
             source.Play();
             Nope = true; isChasingPlayer = false;
             StartCoroutine(player.GetComponentInParent<OnDeathScript>().OnDeath());

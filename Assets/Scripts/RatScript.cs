@@ -103,6 +103,7 @@ public class RatScript : MonoBehaviour
                 }
             }
 
+
             bool deathScript = FindObjectOfType<OnDeathScript>().dead;
             if (deathScript)
             {
