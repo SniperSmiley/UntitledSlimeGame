@@ -2814,7 +2814,7 @@ MonoBehaviour:
   GrossDontTouch: {fileID: 8300000, guid: 2cf530baf62acb84d8fde82d624c6c26, type: 3}
   EffectsMixer: {fileID: 1296323745261813136, guid: 6834cac4dc3845946acaec14dd54ace0, type: 2}
   NumberOfAudioSources: 25
-  MusicGo: {fileID: 1924188352}
+  MusicGo: {fileID: 2044369127}
   MusicBlendDuration: 4
   MusicMixer: {fileID: 24100000, guid: 6834cac4dc3845946acaec14dd54ace0, type: 2}
   MusicMixersParamater:
