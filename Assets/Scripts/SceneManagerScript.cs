@@ -27,9 +27,10 @@ public class SceneManagerScript : MonoBehaviour
     }
 
     private void Update() {
+        /*
         if (Input.GetKeyDown(KeyCode.L)) {
             SwitchScene((int) GameManagerScript.manager.CurScene + 1);
-        }
+        }*/
     }
 
 

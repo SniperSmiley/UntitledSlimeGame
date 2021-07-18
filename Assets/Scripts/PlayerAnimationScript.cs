@@ -83,13 +83,14 @@ public class PlayerAnimationScript : MonoBehaviour {
 
         if (CurrentSize == 0) { if (anim.GetBool("isJumping") == true) { anim.SetBool("isJumping", false); } }
 
+        /*
         if (Input.GetKeyDown(KeyCode.Y)) {
             SwitchPlayerSize(false);
         }
 
         else if (Input.GetKeyDown(KeyCode.H)) {
             SwitchPlayerSize();
-        }
+        }*/
 
         // if they successfully jump play start jump animation 
         // Jump is pressed, grounded and force in more than 50
