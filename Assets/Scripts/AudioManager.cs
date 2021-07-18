@@ -123,6 +123,8 @@ public class AudioManager : MonoBehaviour {
 
     public void SwitchMusic(int scene) {
 
+        if (scene == 6) { return; }
+
         if (scene == 5) { // Haven start from begining
             HavenSource.Play();
         }
