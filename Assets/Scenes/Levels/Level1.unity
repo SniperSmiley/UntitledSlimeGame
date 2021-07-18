@@ -2832,9 +2832,18 @@ PrefabInstance:
       value: Spider
       objectReference: {fileID: 0}
     - target: {fileID: 1369156361132862266, guid: df48a4ad603086b40a4c824086217afe, type: 3}
+
+
+
       propertyPath: AttackDist
       value: 2.85
       objectReference: {fileID: 0}
+
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1638587198}
+
+
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df48a4ad603086b40a4c824086217afe, type: 3}
 --- !u!1001 &3398449411826907730
@@ -2844,6 +2853,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1998908596}
     m_Modifications:
+    - target: {fileID: 3398449410908518450, guid: d1ee103eb5816204ba27c2c650b2ef66, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1638587198}
     - target: {fileID: 3398449411809067658, guid: d1ee103eb5816204ba27c2c650b2ef66, type: 3}
       propertyPath: m_Name
       value: Rat

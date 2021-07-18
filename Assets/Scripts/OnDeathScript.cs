@@ -35,10 +35,7 @@ public class OnDeathScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P)) {
             StartCoroutine(OnDeath());
         }
-        if (enemyCollider.IsTouchingLayers(LayerMask.GetMask("Player")))
-        {
-            dead = true;
-        }
+
     }
 
     public IEnumerator OnDeath() {
