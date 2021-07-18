@@ -101,7 +101,7 @@ public class PlayerAnimationScript : MonoBehaviour {
 
         else {
             //Debug.Log(Time.time- startTime + " " + Controller.m_Grounded);
-            if ((Controller.m_Grounded == true) && ((Time.time - startTime) > timeDelay) && inAir) {
+            if (Controller.m_Grounded && ((Time.time - startTime) > timeDelay) && inAir) {
                 StartCoroutine(AudioManager.PlayEffect(LandingSounds[Random.Range(0, LandingSounds.Length)]));
 
                 anim.SetBool("isJumping", false);
