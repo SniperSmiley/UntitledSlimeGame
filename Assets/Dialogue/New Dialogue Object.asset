@@ -13,9 +13,7 @@ MonoBehaviour:
   m_Name: New Dialogue Object
   m_EditorClassIdentifier: 
   dialogue:
-  - 'This is a test
-
-    Hello wrld'
-  - 'Good Morning good ser
-
-    Godspeed to ye'
+  - WARNING! WARNING! There has been a security breach resulting in the release of
+    mutated specimens.
+  - This is a code 53. I repeat, a code 53. Please follow safety protocol in a calm
+    and orderly fashion.
