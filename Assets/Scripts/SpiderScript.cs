@@ -39,6 +39,9 @@ public class SpiderScript : MonoBehaviour {
 
     private bool LostPlayer = false;
 
+    public bool PlayAttackAnim = false;
+    private Animator anim;
+
     RaycastHit2D ray;
 
     public bool Nope = false;
@@ -48,6 +51,7 @@ public class SpiderScript : MonoBehaviour {
         rend = gameObject.GetComponent<SpriteRenderer>();
         curTarget = pos2.position;
         lookDirection = -transform.right;
+
         
         
     }
@@ -55,6 +59,8 @@ public class SpiderScript : MonoBehaviour {
     // Update is called once per frame
     void Update() {
             
+        if (PlayAttackAnim) { anim.SetBool("Attack", false); } 
+
         // Feeeling very out of it today.. sorrry for bad code xD
 
         dist = transform.position.x - curTarget.x;
@@ -106,7 +112,6 @@ public class SpiderScript : MonoBehaviour {
     }
 
     public void Attack(GameObject player) {
-
 
             source.Play();
             Nope = true; isChasingPlayer = false;

@@ -7,7 +7,7 @@ public class OnDeathScript : MonoBehaviour
     public ParticleSystem DeathEffect;
     public ParticleSystem DeathEffectSecond;
 
-    public PolygonCollider2D enemyCollider;
+    //public PolygonCollider2D enemyCollider;
 
     public AudioClip[] DeathAudioClips;
 
@@ -35,7 +35,7 @@ public class OnDeathScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P)) {
             StartCoroutine(OnDeath());
         }
-       
+
     }
 
     public IEnumerator OnDeath() {
