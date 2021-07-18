@@ -14,7 +14,6 @@ public class OnDeathScript : MonoBehaviour
     public SpriteRenderer CharacterSpriteRenderer;
     private PlayerMovement PlayerMovementScript;
     private Rigidbody2D rig;
-    private SpiderScript EnemyScript;
 
     private ReloadScene reload;
 
@@ -23,7 +22,6 @@ public class OnDeathScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        EnemyScript = GetComponent<SpiderScript>();
         PlayerMovementScript = GetComponent<PlayerMovement>();
         reload = GetComponent<ReloadScene>();
         rig = GetComponent<Rigidbody2D>();
