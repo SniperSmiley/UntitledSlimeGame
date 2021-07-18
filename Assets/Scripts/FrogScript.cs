@@ -48,6 +48,8 @@ public class FrogScript : MonoBehaviour {
 
     public bool Nope = false;
 
+    public bool disable = false;
+
     // Start is called before the first frame update
     void Start() {
         rend = gameObject.GetComponent<SpriteRenderer>();
@@ -61,7 +63,9 @@ public class FrogScript : MonoBehaviour {
     // Update is called once per frame
     void Update() {
             
-     //   if (PlayAttackAnim) { anim.SetBool("Attack", false); } 
+        if (disable) { return; }
+
+        //   if (PlayAttackAnim) { anim.SetBool("Attack", false); } 
 
         // Feeeling very out of it today.. sorrry for bad code xD
 
@@ -106,6 +110,7 @@ public class FrogScript : MonoBehaviour {
     }
 
     public IEnumerator TryAttack() {
+        source.Play();
         anim.SetBool("Attack", true);
         yield return new WaitForSeconds(.20f);
         if (ray.collider != null) {
@@ -125,7 +130,6 @@ public class FrogScript : MonoBehaviour {
     public void Attack(GameObject player) {
 
             if (PlayAttackAnim) { anim.SetBool("Attack", true); }
-            source.Play();
             Nope = true; isChasingPlayer = false;
             StartCoroutine(player.GetComponentInParent<OnDeathScript>().OnDeath());
 
@@ -203,5 +207,7 @@ public class FrogScript : MonoBehaviour {
         else { lookDirection = transform.right; }
 
     }
+
+    
 
 }
