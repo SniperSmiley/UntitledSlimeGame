@@ -75,8 +75,13 @@ public class PlayerAnimationScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+
+
+
         CurrentSizeDispaly = CurrentSize;
         // TEST
+
+        if (CurrentSize == 0) { if (anim.GetBool("isJumping") == true) { anim.SetBool("isJumping", false); } }
 
         if (Input.GetKeyDown(KeyCode.Y)) {
             SwitchPlayerSize(false);
