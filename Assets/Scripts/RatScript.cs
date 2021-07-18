@@ -102,15 +102,6 @@ public class RatScript : MonoBehaviour
                     Attack(ray.collider.gameObject);
                 }
             }
-
-            bool deathScript = FindObjectOfType<OnDeathScript>().dead;
-            if (deathScript)
-            {
-                source.Play();
-                Nope = true; isChasingPlayer = false;
-                StartCoroutine(player.GetComponentInParent<OnDeathScript>().OnDeath());
-            }
-
         }
 
 
