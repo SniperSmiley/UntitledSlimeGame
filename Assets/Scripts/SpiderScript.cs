@@ -79,9 +79,9 @@ public class SpiderScript : MonoBehaviour {
         
          //st = transform.position.x - curTarget.position.x;
         // Maybe attack?
-        if ( isChasingPlayer) {  Debug.Log("Attack1");
-            if (ray.collider.gameObject.tag == "Player") {  Debug.Log("Attack2");
-             if ((ray.collider.gameObject.transform.position - transform.position ).magnitude < AttackDist) {  Debug.Log("Attack3");
+        if ( isChasingPlayer) {  //Debug.Log("Attack1");
+            if (ray.collider.gameObject.tag == "Player") { // Debug.Log("Attack2");
+             if ((ray.collider.gameObject.transform.position - transform.position ).magnitude < AttackDist) {  //Debug.Log("Attack3");
                      Attack(ray.collider.gameObject);
                 }
                
@@ -94,7 +94,7 @@ public class SpiderScript : MonoBehaviour {
     }
 
     private void Attack(GameObject player) {
-        Debug.Log("Attack");
+       // Debug.Log("Attack");
         source.Play();
         Nope = true; isChasingPlayer = false;
         StartCoroutine(player.GetComponentInParent<OnDeathScript>().OnDeath());   
