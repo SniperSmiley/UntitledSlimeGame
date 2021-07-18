@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: a0fbbd2a8495b46e882aaacb04a3c2b1
+guid: 00a1db2a52f514b168468dab3dc4a3f7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3994685168764106890
-    second: Rat_Spritesheet_0
+      213: 6261180780860757445
+    second: Pipes_0
   - first:
-      213: -4163599190111446536
-    second: Rat_Spritesheet_1
-  - first:
-      213: 6687733345070797464
-    second: Rat_Spritesheet_2
+      213: 6958147056157409064
+    second: Pipes_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -55,7 +52,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 140
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rat_Spritesheet_0
+      name: Pipes_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 6
-        width: 39
-        height: 16
+        x: 864
+        y: 165
+        width: 49
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,20 +123,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6774b46f0070098c0800000000000000
-      internalID: -3994685168764106890
+      spriteID: 5c555bd3fbe24e650800000000000000
+      internalID: 6261180780860757445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rat_Spritesheet_1
+      name: Pipes_1
       rect:
         serializedVersion: 2
-        x: 107
-        y: 6
-        width: 39
-        height: 16
+        x: 899
+        y: 136
+        width: 4
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,29 +144,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f99d46a89ce736c0800000000000000
-      internalID: -4163599190111446536
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rat_Spritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 193
-        y: 6
-        width: 40
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 892da715b0a9fcc50800000000000000
-      internalID: 6687733345070797464
+      spriteID: 82f3139b1ed409060800000000000000
+      internalID: 6958147056157409064
       vertices: []
       indices: 
       edges: []
