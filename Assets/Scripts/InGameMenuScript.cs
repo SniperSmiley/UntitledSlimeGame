@@ -35,9 +35,9 @@ public class InGameMenuScript : MonoBehaviour
         
     }
 
-    private void OnSceneChange (int Scene) {
+    private void OnSceneChange() {
       //  Canvas.worldCamera = Camera.main;
-        //Debug.Log("Scene Change event called from MENU");
+        Debug.Log("Scene Change event called from MENU");
 
         if (Menu == null) { return; } 
 

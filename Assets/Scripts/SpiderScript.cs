@@ -6,6 +6,9 @@ public class SpiderScript : MonoBehaviour {
 
     public AudioSource source;
 
+    public GameObject player;
+
+
     public Transform pos1;
     public Transform pos2;
 
@@ -26,7 +29,7 @@ public class SpiderScript : MonoBehaviour {
     private Vector2 curTarget;
     private float timeLostPlayer = 0f;
     private bool target = false; // default is pos 2
-    private bool isChasingPlayer = false;
+    public bool isChasingPlayer = false;
 
     private float dist;
     private Vector2 lookDirection;
@@ -38,13 +41,15 @@ public class SpiderScript : MonoBehaviour {
 
     RaycastHit2D ray;
 
-    private bool Nope = false;
+    public bool Nope = false;
 
     // Start is called before the first frame update
     void Start() {
         rend = gameObject.GetComponent<SpriteRenderer>();
         curTarget = pos2.position;
         lookDirection = -transform.right;
+        
+        
     }
 
     // Update is called once per frame
@@ -79,25 +84,34 @@ public class SpiderScript : MonoBehaviour {
         
          //st = transform.position.x - curTarget.position.x;
         // Maybe attack?
-        if ( isChasingPlayer) {  //Debug.Log("Attack1");
-            if (ray.collider.gameObject.tag == "Player") { // Debug.Log("Attack2");
-             if ((ray.collider.gameObject.transform.position - transform.position ).magnitude < AttackDist) {  //Debug.Log("Attack3");
+        if ( isChasingPlayer) {
+            if (ray.collider.gameObject.tag == "Player") {
+             if ((ray.collider.gameObject.transform.position - transform.position ).magnitude < AttackDist) {
                      Attack(ray.collider.gameObject);
                 }
-               
             }
-        
+
+                bool deathScript = FindObjectOfType<OnDeathScript>().dead;
+            if (deathScript)
+            {
+                source.Play();
+                Nope = true; isChasingPlayer = false;
+                StartCoroutine(player.GetComponentInParent<OnDeathScript>().OnDeath());
+            }
+
         }
-       
+
 
         MoveSpider();
     }
 
-    private void Attack(GameObject player) {
-       // Debug.Log("Attack");
-        source.Play();
-        Nope = true; isChasingPlayer = false;
-        StartCoroutine(player.GetComponentInParent<OnDeathScript>().OnDeath());   
+    public void Attack(GameObject player) {
+
+
+            source.Play();
+            Nope = true; isChasingPlayer = false;
+            StartCoroutine(player.GetComponentInParent<OnDeathScript>().OnDeath());
+
         
     }
 

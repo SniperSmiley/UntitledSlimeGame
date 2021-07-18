@@ -18,6 +18,7 @@ public class OnDeathScript : MonoBehaviour
 
     private ReloadScene reload;
 
+    public bool dead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,10 @@ public class OnDeathScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P)) {
             StartCoroutine(OnDeath());
         }
+        if (enemyCollider.IsTouchingLayers(LayerMask.GetMask("Player")))
+        {
+            dead = true;
+        }
     }
 
     public IEnumerator OnDeath() {
@@ -42,7 +47,7 @@ public class OnDeathScript : MonoBehaviour
         PlayerMovementScript.MovementLocked = true;
         rig.constraints = RigidbodyConstraints2D.FreezePosition;
 
-        if (DeathAudioClips.Length > 0) { StartCoroutine(AudioManager.PlayEffect(DeathAudioClips[Random.Range(0, DeathAudioClips.Length)]));}
+        if (DeathAudioClips.Length > 0) { Debug.Log("OUCH"); StartCoroutine(AudioManager.PlayEffect(DeathAudioClips[Random.Range(0, DeathAudioClips.Length)]));}
 
         Instantiate(DeathEffect, transform.position, DeathEffect.transform.rotation);
         Instantiate(DeathEffectSecond, transform.position, DeathEffect.transform.rotation);
