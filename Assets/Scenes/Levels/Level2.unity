@@ -654,6 +654,10 @@ PrefabInstance:
       propertyPath: DeathAudioClips.Array.data[3]
       value: 
       objectReference: {fileID: 8300000, guid: b93e19660bfbbdc438df814e8d8186f4, type: 3}
+    - target: {fileID: 4367811562765434038, guid: 8547e279528cc354390a6962348787be, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6ab8788da77698240a3b78bc31ff452b, type: 2}
     - target: {fileID: 4367811562765434039, guid: 8547e279528cc354390a6962348787be, type: 3}
       propertyPath: m_RootOrder
       value: 1
