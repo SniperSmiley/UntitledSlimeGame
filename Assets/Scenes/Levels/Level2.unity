@@ -1861,17 +1861,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2003489823}
     m_Modifications:
+    - target: {fileID: 5958725253784556373, guid: b7bcf8057f6fad841b6a55d0a7656eb0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5958725253784556394, guid: b7bcf8057f6fad841b6a55d0a7656eb0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5958725254370128592, guid: b7bcf8057f6fad841b6a55d0a7656eb0, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5958725254370128592, guid: b7bcf8057f6fad841b6a55d0a7656eb0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -25.713018
+      value: -30.27
       objectReference: {fileID: 0}
     - target: {fileID: 5958725254370128592, guid: b7bcf8057f6fad841b6a55d0a7656eb0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5987413
+      value: -2.49
       objectReference: {fileID: 0}
     - target: {fileID: 5958725254370128592, guid: b7bcf8057f6fad841b6a55d0a7656eb0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1967,7 +1975,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.010610104, y: 0.13531888}
+  m_Offset: {x: 0.02519451, y: 0.13531888}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1978,7 +1986,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9951047, y: 0.2991054}
+  m_Size: {x: 0.9234954, y: 0.2991054}
   m_EdgeRadius: 0
 --- !u!212 &762028040
 SpriteRenderer:
@@ -3237,7 +3245,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 1296323745261813136, guid: 6834cac4dc3845946acaec14dd54ace0, type: 2}
   m_audioClip: {fileID: 8300000, guid: ec0eb368aa9e4294ea3df4b57da4bb07, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
