@@ -26,7 +26,10 @@ public class EatMeScript : MonoBehaviour {
         source.Play();
         rend.gameObject.SetActive(false);
         Destroy(col);
-        PlayerAnimationScript.SwitchPlayerSize(PlayerAnimationScript.CurrentSize + ChangeInSize);
+        int calcIncrease = 6 - PlayerAnimationScript.CurrentSize;
+        if (ChangeInSize >= calcIncrease) { PlayerAnimationScript.SwitchPlayerSize(PlayerAnimationScript.CurrentSize + calcIncrease); }
+        else { PlayerAnimationScript.SwitchPlayerSize(PlayerAnimationScript.CurrentSize + ChangeInSize); }
+       
         yield return new WaitForSeconds(source.clip.length);
         Destroy(gameObject);
     }

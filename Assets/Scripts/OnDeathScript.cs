@@ -42,7 +42,7 @@ public class OnDeathScript : MonoBehaviour
         PlayerMovementScript.MovementLocked = true;
         rig.constraints = RigidbodyConstraints2D.FreezePosition;
 
-        if (DeathAudioClips.Length > 0) { Debug.Log("OUCH"); StartCoroutine(AudioManager.PlayEffect(DeathAudioClips[Random.Range(0, DeathAudioClips.Length)]));}
+        if (DeathAudioClips.Length > 0) { StartCoroutine(AudioManager.PlayEffect(DeathAudioClips[Random.Range(0, DeathAudioClips.Length)]));}
 
         Instantiate(DeathEffect, transform.position, DeathEffect.transform.rotation);
         Instantiate(DeathEffectSecond, transform.position, DeathEffect.transform.rotation);
